@@ -1,0 +1,14 @@
+# dependencies
+node_modules/
+
+# Vercel deployment metadata
+.vercel/
+
+# build / cache output
+.next/
+dist/
+build/
+
+# misc
+*.log
+.DS_Store

@@ -1,0 +1,185 @@
+.container {
+  min-height: 100vh;
+  background-color: #000;
+  color: #f0f0f0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 2rem;
+}
+
+.main {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.title {
+  color: hotpink;
+  font-size: 4rem;
+  text-align: center;
+  text-shadow: 0 0 10px red;
+  letter-spacing: 0.05em;
+}
+
+.glitchHeader {
+  font-size: 2.2rem;
+  text-transform: uppercase;
+  color: hotpink;
+  text-shadow: 0 0 4px #ff007f, 0 0 8px #ff007f;
+  border-bottom: 2px dashed #ff007f;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.manifestoSection {
+  background: rgba(255, 0, 128, 0.05);
+  border-left: 4px solid hotpink;
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.2);
+}
+
+.manifestoText p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.15rem;
+  color: #ccc;
+}
+
+.comicSection {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.comicLink {
+  display: inline-block;
+  margin-top: 1rem;
+  color: hotpink;
+  text-decoration: none;
+  border: 1px solid hotpink;
+  padding: 0.5rem 1rem;
+  transition: 0.2s ease-in-out;
+}
+
+.comicLink:hover {
+  background: hotpink;
+  color: black;
+}
+
+.signalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.signalCard {
+  background: #111;
+  border: 1px solid #333;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.3);
+  transition: transform 0.2s ease-in-out;
+  text-align: center;
+}
+
+.signalCard:hover {
+  transform: scale(1.02);
+}
+
+.signalImage {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border: 1px solid #222;
+}
+
+.signalIntroContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  flex-wrap: nowrap;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.signalIntroImage {
+  flex: 1 1 500px;
+  max-width: 700px;
+}
+
+.signalIntroText {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 1rem;
+  background: rgba(255, 0, 128, 0.05);
+  border-left: 4px solid hotpink;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.2);
+}
+
+.signalCaption {
+  color: #ccc;
+  white-space: pre-wrap;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-top: 0.5rem;
+}
+
+.signalTitle {
+  color: hotpink;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+.signalQuote {
+  color: #999;
+  font-style: italic;
+  font-size: 0.95rem;
+  margin-top: 0.5rem;
+}
+
+.signalIntroImageBanner {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.signalScrollContainer {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.signalIntroTextLong {
+  flex: 1 1 400px;
+  max-width: 600px;
+  padding: 1rem;
+  background: rgba(255, 0, 128, 0.05);
+  border-left: 4px solid hotpink;
+  box-shadow: 0 0 10px rgba(255, 0, 128, 0.2);
+  height: fit-content;
+}
+
+.signalGridRight {
+  flex: 2 1 800px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.signalGridRight {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
