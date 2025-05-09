@@ -267,7 +267,7 @@ export default function Signals() {
         <title>Visual Signals</title>
       </Head>
           <main className={styles.main}>
-              <a href="/" className={styles.homeLink}>← Home</a>
+              <a href="/" className={styles.homeLink}>🏠 Home</a>
               <h1 className={styles.title}>VISUAL SIGNALS</h1>
               <p className={styles.description}>Transmission Archive: 23 intercepted signals</p>
 

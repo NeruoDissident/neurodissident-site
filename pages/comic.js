@@ -35,7 +35,7 @@ export default function Comic() {
         <title>The Comic | NeuroDissident</title>
       </Head>
       <main className={styles.main}>
-        <a href="/" className={styles.homeLink}>← Home</a>
+        <a href="/" className={styles.homeLink}>🏠 Home</a>
         <h1 className={styles.title}>NEURODISSIDENT COMIC</h1>
         <p className={styles.description}>Full comic viewer — click any page to expand</p>
 
