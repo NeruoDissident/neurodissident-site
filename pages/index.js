@@ -3,15 +3,14 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
 export default function Home() {
+  console.log('Rendering Home page...');
   return (
     <div className={styles.container}>
       <Head>
         <title>NeuroDissident</title>
       </Head>
       <main className={styles.main}>
-      <a href="/" className={styles.homeLink}>← Home</a>
-
-      <h1 className={styles.title}>THE SIGNAL IS LIVE</h1>
+        <h1 className={styles.title}>THE SIGNAL IS LIVE</h1>
 
         <section className={styles.manifestoSection}>
           <h2 className={styles.glitchHeader}>MANIFESTO</h2>
