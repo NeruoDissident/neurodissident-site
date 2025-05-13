@@ -1,0 +1,78 @@
+/* GlitchError.module.css - Cyberpunk error/glitch placeholder page */
+
+.glitchBg {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #1a0028 60%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffb3e6;
+  font-family: 'Share Tech Mono', 'Fira Mono', 'Courier New', monospace;
+  padding: 2.5rem 1.2rem;
+}
+
+.glitchErrorBox {
+  background: rgba(10, 10, 18, 0.93);
+  border: 3px solid #ff007f;
+  border-radius: 1.3rem;
+  box-shadow: 0 0 32px #ff007f55, 0 0 2px #fff;
+  padding: 2.8rem 2.2rem 2.2rem 2.2rem;
+  max-width: 480px;
+  text-align: center;
+  position: relative;
+}
+
+.glitchTitle {
+  color: #00ffe7;
+  font-size: 2.2rem;
+  letter-spacing: 0.13em;
+  margin-bottom: 1.3rem;
+  text-shadow: 0 0 22px #00ffe7cc, 0 0 1px #fff;
+  font-family: inherit;
+}
+
+.glitchMsg {
+  font-size: 1.19rem;
+  margin-bottom: 2.1rem;
+  color: #ffb3e6;
+  line-height: 1.6;
+}
+
+.glitchText {
+  font-family: inherit;
+  font-size: 1.09em;
+  color: #ff007f;
+  letter-spacing: 0.09em;
+  text-shadow: 0 0 8px #ff007faa;
+  display: block;
+  margin-bottom: 0.7em;
+}
+
+.glitchTextAlt {
+  color: #f0f4fa;
+  font-size: 1.01em;
+  text-shadow: 0 0 8px #00ffe7aa;
+}
+
+.homeBtn {
+  display: inline-block;
+  background: #181824;
+  border: 2.5px solid #00ffe7;
+  border-radius: 0.8rem;
+  color: #00ffe7;
+  font-weight: bold;
+  font-size: 1.13rem;
+  padding: 0.5em 2.1em;
+  text-decoration: none;
+  box-shadow: 0 0 12px #00ffe7aa, 0 0 1px #fff;
+  letter-spacing: 0.05em;
+  margin-top: 1.1em;
+  transition: border-color 0.16s, box-shadow 0.16s, color 0.12s, background 0.16s;
+  outline: none;
+}
+.homeBtn:hover, .homeBtn:focus {
+  border-color: #ff007f;
+  color: #ff007f;
+  background: #1a0028;
+  box-shadow: 0 0 18px #ff007faa, 0 0 1px #fff;
+}

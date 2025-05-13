@@ -10,8 +10,50 @@ export default function Home() {
         <title>NeuroDissident</title>
       </Head>
       <main className={styles.main}>
-        <h1 className={styles.title}>THE SIGNAL IS LIVE</h1>
+        <h1 className={styles.title}>THE LIVING WALL</h1>
 
+        {/* Hero Section */}
+        <section className={styles.heroSection}>
+          <a href="/comic" className={styles.heroCard} tabIndex={0}>
+            <img src="/comic/act-1-page-0.webp" alt="Comic" className={styles.heroImg} />
+            <div className={styles.heroContent}>
+              <span className={styles.heroLabel}>Comic</span>
+              <span className={styles.heroCTA}>Read the Story</span>
+            </div>
+          </a>
+          <a href="/signals" className={styles.heroCard} tabIndex={0}>
+            <img src="/signals/0.webp" alt="Signals" className={styles.heroImg} />
+            <div className={styles.heroContent}>
+              <span className={styles.heroLabel}>Signals</span>
+              <span className={styles.heroCTA}>View Signals</span>
+            </div>
+          </a>
+        </section>
+
+        {/* About Button */}
+        <div className={styles.aboutHeroWrap}>
+          <a href="/about" className={styles.aboutHeroBtn} tabIndex={0}>
+            <span>About NeuroDissident</span>
+          </a>
+        </div>
+
+        {/* Secondary Grid for Arcade, Lore, Merch */}
+        <nav className={styles.secondaryGrid}>
+          <a href="/arcade" className={styles.secondaryItem} tabIndex={0}>
+            <img src="/signals/1.webp" alt="Arcade" className={styles.secondaryIcon} />
+            <span className={styles.secondaryLabel}>Arcade</span>
+          </a>
+          <a href="/lore" className={styles.secondaryItem} tabIndex={0}>
+            <img src="/signals/2.webp" alt="Lore" className={styles.secondaryIcon} />
+            <span className={styles.secondaryLabel}>Lore</span>
+          </a>
+          <a href="/merch" className={styles.secondaryItem} tabIndex={0}>
+            <img src="/signals/4.webp" alt="Merch" className={styles.secondaryIcon} />
+            <span className={styles.secondaryLabel}>Merch</span>
+          </a>
+        </nav>
+
+        {/* Manifesto Section (keep) */}
         <section className={styles.manifestoSection}>
           <h2 className={styles.glitchHeader}>MANIFESTO</h2>
           <div className={styles.manifestoText}>
@@ -29,19 +71,44 @@ export default function Home() {
           </div>
         </section>
 
-        <section className={styles.comicSection}>
-          <h2>VISUAL SIGNALS</h2>
-          <p>Explore the archive of intercepted transmissions.</p>
-          <a className={styles.comicLink} href="/signals">Enter the Signal Grid →</a>
-        </section>
-
-        <section className={styles.comicSection}>
-          <h2>THE COMIC</h2>
-          <p>
-            The NeuroDissident story begins below. Click to explore the full visual archive.
-          </p>
-          <a className={styles.comicLink} href="/comic">Read the Comic →</a>
-        </section>
+        {/* Footer */}
+        <footer className={styles.cyberFooter}>
+           <div className={styles.footerLinks}>
+            <a href="https://pinterest.com/neurodissident" target="_blank" rel="noopener noreferrer" aria-label="Pinterest" className={styles.footerLinkItem}>
+              <img src="/signals/10.webp" alt="Pinterest" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>Pinterest</span>
+              <span className={styles.footerTooltip}>@neurodissident</span>
+            </a>
+            <a href="https://instagram.com/neuro.dissident" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className={styles.footerLinkItem}>
+              <img src="/signals/5.webp" alt="Instagram" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>Instagram</span>
+              <span className={styles.footerTooltip}>@neuro.dissident</span>
+            </a>
+            <a href="https://twitter.com/neurodissident" target="_blank" rel="noopener noreferrer" aria-label="Twitter" className={styles.footerLinkItem}>
+              <img src="/signals/6.webp" alt="Twitter" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>X</span>
+              <span className={styles.footerTooltip}>@neurodissident</span>
+            </a>
+            <a href="https://redbubble.com/people/neurodissident/shop" target="_blank" rel="noopener noreferrer" aria-label="Redbubble" className={styles.footerLinkItem}>
+              <img src="/signals/7.webp" alt="Redbubble" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>Redbubble</span>
+              <span className={styles.footerTooltip}>neurodissident shop</span>
+            </a>
+            <a href="https://displate.com/neurodissident" target="_blank" rel="noopener noreferrer" aria-label="Displate" className={styles.footerLinkItem}>
+              <img src="/signals/8.webp" alt="Displate" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>Displate</span>
+              <span className={styles.footerTooltip}>neurodissident prints</span>
+            </a>
+            <span className={`${styles.footerLinkItem} ${styles.footerDisabled}`} aria-disabled="true" tabIndex="-1">
+              <img src="/signals/9.webp" alt="Etsy" className={styles.footerIcon} />
+              <span className={styles.footerLabel}>Etsy</span>
+              <span className={styles.footerTooltip}>Coming soon</span>
+            </span>
+          </div>
+          <div className={styles.footerLore}>
+            <span>“Fragments of code, echoes of rebellion.”</span>
+          </div>
+        </footer>
       </main>
     </div>
   );
