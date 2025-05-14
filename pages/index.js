@@ -2,8 +2,39 @@
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 
+import { useEffect, useRef, useState } from "react";
+
+const videoFiles = [
+  "/videos/homepage loop 1.mp4",
+  "/videos/homepage loop 2.mp4",
+  "/videos/homepage loop 4.mp4",
+];
+
+function shuffleArray(array) {
+  let arr = array.slice();
+  for (let i = arr.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [arr[i], arr[j]] = [arr[j], arr[i]];
+  }
+  return arr;
+}
+
 export default function Home() {
-  console.log('Rendering Home page...');
+  const [shuffledVideos, setShuffledVideos] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const shuffled = shuffleArray(videoFiles);
+    const startIndex = Math.floor(Math.random() * shuffled.length);
+    setShuffledVideos(shuffled);
+    setCurrentIndex(startIndex);
+  }, []);
+
+  const handleVideoEnd = () => {
+    setCurrentIndex((prev) => (prev + 1) % shuffledVideos.length);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -11,6 +42,24 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>THE LIVING WALL</h1>
+
+        {/* Video Section */}
+        <div className={styles.videoSection} style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", margin: "32px 0" }}>
+          {shuffledVideos.length > 0 && (
+            <video
+              key={shuffledVideos[currentIndex]}
+              src={shuffledVideos[currentIndex]}
+              autoPlay
+              muted
+              playsInline
+              onEnded={handleVideoEnd}
+              className={styles.homepageVideo}
+              style={{ width: "100%", maxWidth: "900px", maxHeight: "500px", borderRadius: "12px", boxShadow: "0 2px 16px rgba(0,0,0,0.25)", objectFit: "cover" }}
+              preload="none"
+              poster="/images/video-placeholder.jpg"
+            />
+          )}
+        </div>
 
         {/* Hero Section */}
         <section className={styles.heroSection}>
