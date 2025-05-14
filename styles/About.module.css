@@ -1,7 +1,37 @@
 /* About.module.css - Responsive, dark, modular two-column card layout for About page */
 
+@media (max-width: 700px) {
+}
+
+@media (max-width: 600px) {
+  .aboutCardImgSquare,
+  .aboutCardImgWide {
+    width: 100% !important;
+    max-width: 100vw !important;
+    height: auto !important;
+    display: block;
+    margin: 0 auto;
+  }
+  .aboutCardImageVertical,
+  .aboutCardImageHorizontal {
+    width: 100% !important;
+    max-width: 100vw !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@media (max-width: 700px) {
+  .aboutBg {
+    min-height: 100vh;
+    width: 100vw;
+  }
+}
+
+
 .aboutBg {
-  min-height: 100vh;
+  min-height: calc(var(--vh, 1vh) * 100);
   background: #101016;
   color: #f0f4fa;
   font-family: 'Inter', 'Roboto', Arial, sans-serif;
