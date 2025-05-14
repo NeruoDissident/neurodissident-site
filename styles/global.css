@@ -7,3 +7,40 @@ html, body {
 body {
   background: #101016 !important;
 }
+
+.video-bg-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.homepage-video-bg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -2;
+}
+
+.video-bg-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.45); /* darken for contrast */
+  z-index: -1;
+}
+
+/* Ensure all scrollable content is above the background */
+body, #__next, .container, .main {
+  position: relative;
+  z-index: 1;
+}

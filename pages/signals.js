@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
 import styles from '../styles/Home.module.css';
+import merchStyles from '../styles/Merch.module.css';
 
 const signalIntro = {
   src: '/signals/0.webp',
@@ -266,9 +267,15 @@ export default function Signals() {
       <Head>
         <title>Visual Signals</title>
       </Head>
+      <nav className={merchStyles.stickyNav}>
+        <a href="/" className={merchStyles.homeLink}>🏠 Home</a>
+      </nav>
+      <Head>
+        <title>Visual Signals</title>
+      </Head>
           <main className={styles.main}>
-              <a href="/" className={styles.homeLink}>🏠 Home</a>
-              <h1 className={styles.title}>VISUAL SIGNALS</h1>
+
+            <h1 className={styles.title}>VISUAL SIGNALS</h1>
               <p className={styles.description}>Transmission Archive: 23 intercepted signals</p>
 
               <div className={styles.signalIntroImageBanner}>

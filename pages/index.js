@@ -44,7 +44,7 @@ export default function Home() {
         <h1 className={styles.title}>THE LIVING WALL</h1>
 
         {/* Video Section */}
-        <div className={styles.videoSection} style={{ display: "flex", justifyContent: "center", alignItems: "center", width: "100%", margin: "32px 0" }}>
+        <div className="video-bg-fixed">
           {shuffledVideos.length > 0 && (
             <video
               key={shuffledVideos[currentIndex]}
@@ -53,12 +53,14 @@ export default function Home() {
               muted
               playsInline
               onEnded={handleVideoEnd}
-              className={styles.homepageVideo}
-              style={{ width: "100%", maxWidth: "900px", maxHeight: "500px", borderRadius: "12px", boxShadow: "0 2px 16px rgba(0,0,0,0.25)", objectFit: "cover" }}
+              className="homepage-video-bg"
               preload="none"
               poster="/images/video-placeholder.jpg"
+              tabIndex={-1}
+              aria-hidden="true"
             />
           )}
+          <div className="video-bg-overlay"></div>
         </div>
 
         {/* Hero Section */}
