@@ -2,6 +2,8 @@ import { useEffect } from 'react';
 import '../styles/global.css';
 import '../styles/About.module.css';
 
+import Head from 'next/head';
+
 export default function MyApp({ Component, pageProps }) {
   useEffect(() => {
     // Set --vh to the actual viewport height in pixels
@@ -13,5 +15,12 @@ export default function MyApp({ Component, pageProps }) {
     window.addEventListener('resize', setVh);
     return () => window.removeEventListener('resize', setVh);
   }, []);
-  return <Component {...pageProps} />;
+  return (
+    <>
+      <Head>
+        <meta name="p:domain_verify" content="66b9517478e090caa9d87f2bde7ac8ac" />
+      </Head>
+      <Component {...pageProps} />
+    </>
+  );
 }
