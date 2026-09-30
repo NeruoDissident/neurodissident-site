@@ -51,6 +51,23 @@ export const games = [
     tools: 'JavaScript · HTML / CSS · Canvas · Web Audio · Node.js build · Python / Pillow sprites',
     note: 'Save and continue between sessions. Permadeath, past-run records and meta unlocks make each attempt part of a larger story.'
   }
+,
+  {
+    id: 'wrath-of-carl', collection: 'experiments',
+    title: 'The Wrath of Carl', version: 'Carl',
+    stage: 'Concept prototype', format: 'Satirical driving arcade · Playable concept',
+    url: 'https://wrath-of-carl.vercel.app/',
+    source: 'https://github.com/NeruoDissident/wrath-of-carl',
+    image: '/arcade/wrath-of-carl.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'Carl patrols a top-down city, with marked traffic violations, an evidence panel and a wheel boot launcher.',
+    summary: 'Minor infractions. Major consequences. Turn traffic-etiquette frustration into arcade slapstick.',
+    description: 'Minor infractions. Major consequences. Patrol an open city, document selfish driving, and deliver absurd, slapstick enforcement. Take on six missions or roam in free patrol, unlocking tools and upgrading your vehicle. Inspired by my brother and our shared frustration with drivers who treat road rules as optional.',
+    concept: 'A fully playable sketch of a bigger game idea. This prototype explores the premise and core loop; the larger game is still taking shape.',
+    device: 'PC recommended; optional touch controls in landscape',
+    controls: 'WASD / arrows to drive · Tab to select · Hold E for evidence · Space to enforce · Shift to boost',
+    tools: 'JavaScript · HTML / CSS · Canvas · Web Audio',
+    note: 'Progress saves in your browser. Export/import saves in Settings to move between browsers or deployment addresses.'
+  }
 ];
 
 export const collections = [
@@ -66,4 +83,10 @@ export const collections = [
     title: 'Fractured City: Night Run',
     description: 'Two versions of the urban survival roguelike. One runner against the city. Fully playable, still evolving.'
   }
-];
+,
+  {
+    id: 'experiments', eyebrow: '03 / IDEAS AT PLAY',
+    title: 'Experiments',
+    description: 'Mini-games, one-shot experiments and playable ideas. Some are complete little loops; others are the beginnings of something bigger.'
+  }];
+
