@@ -27,7 +27,7 @@ function GameCard({ game }) {
         <p className={styles.saveNote}>{game.note}</p>
         <div className={styles.actions}>
           <a className={styles.play} href={game.url} target="_blank" rel="noopener noreferrer">Play {game.version} ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>
-          <a className={styles.source} href={game.source} target="_blank" rel="noopener noreferrer">Source ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>
+          {game.source && <a className={styles.source} href={game.source} target="_blank" rel="noopener noreferrer">Source ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>}
         </div>
       </div>
     </article>
