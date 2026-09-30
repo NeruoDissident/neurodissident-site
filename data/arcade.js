@@ -1,6 +1,6 @@
 export const games = [
   {
-    id: 'fractured-city', title: 'The Fractured City', version: 'V1',
+    collection: 'fractured-city', format: 'Single-prompt experiment · Survival colony sim', id: 'fractured-city', title: 'The Fractured City', version: 'V1',
     url: 'https://the-fractured-city.vercel.app/',
     source: 'https://github.com/NeruoDissident/The-Fractured-City',
     image: '/arcade/fractured-city.png',
@@ -12,7 +12,7 @@ export const games = [
     note: 'Progress saves in your browser. Export a save to keep a portable backup.'
   },
   {
-    id: 'fractured-city-v2', title: 'Fractured City V2', version: 'V2',
+    collection: 'fractured-city', format: 'Single-prompt experiment · Survival colony sim', id: 'fractured-city-v2', title: 'Fractured City V2', version: 'V2',
     url: 'https://fractured-city-v2.vercel.app/',
     source: 'https://github.com/NeruoDissident/fractured-city-v2',
     image: '/arcade/fractured-city-v2.png',
@@ -22,5 +22,48 @@ export const games = [
     controls: 'Mouse and keyboard · On touch: tap, drag, pinch and long-press to give orders',
     tools: 'JavaScript · HTML / CSS · Canvas · PWA / service worker',
     note: 'Autosaves in your browser. Supports home-screen installation and offline play after the first load.'
+  },
+  {
+    id: 'the-night-run', collection: 'night-run',
+    title: 'The Night Run', version: 'The Night Run',
+    format: 'Turn-based survival roguelike',
+    url: 'https://the-night-run-neon.vercel.app/',
+    source: 'https://github.com/NeruoDissident/The-Night-Run',
+    image: '/arcade/night-run-neon.png',
+    imageAlt: 'A Street Kid explores Lowlight Blocks, with survival meters, a city map and nearby contacts.',
+    description: 'Choose from six classes and survive eight procedural districts. Use stealth, tactical combat, crafting and faction alliances to shape your run. Find an escape, commit to a faction, or leave another life behind in the city.',
+    device: 'PC or mobile — includes an eight-direction touch pad',
+    controls: 'WASD / arrows to move · E to interact · Tab / F to target and attack · Touch movement and action buttons',
+    tools: 'JavaScript · HTML / CSS · Canvas · Python build · PWA / service worker',
+    note: 'Local autosaves with export/import. Installable for offline play after the first load. Permadeath ends the active run.'
+  },
+  {
+    id: 'night-run', collection: 'night-run',
+    title: 'Night Run', version: 'Night Run',
+    format: 'Turn-based survival roguelike',
+    url: 'https://night-run-eight.vercel.app/',
+    source: 'https://github.com/NeruoDissident/Night-Run',
+    image: '/arcade/night-run-eight.png',
+    imageAlt: 'A pixel-art Street Kid explores The Last Light with gear, survival meters and a turn log.',
+    description: 'One runner, eight procedural districts, and something waiting in the wiring. Develop a build across seven classes and fourteen specializations, balance survival with cybernetics and grafts, and navigate faction rivalries toward four escape routes and nine endings.',
+    device: 'PC recommended for overview; touch controls also available',
+    controls: 'WASD / arrows to move · Bump to attack or interact · Keyboard, mouse and touch controls',
+    tools: 'JavaScript · HTML / CSS · Canvas · Web Audio · Node.js build · Python / Pillow sprites',
+    note: 'Save and continue between sessions. Permadeath, past-run records and meta unlocks make each attempt part of a larger story.'
+  }
+];
+
+export const collections = [
+  {
+    id: 'fractured-city',
+    eyebrow: '01 / EVOLVING WORLDS',
+    title: 'Fractured City',
+    description: 'Two single-prompt takes on a city learning to survive. Both fully playable, both still in development.'
+  },
+  {
+    id: 'night-run',
+    eyebrow: '02 / SURVIVAL ROGUELIKES',
+    title: 'Fractured City: Night Run',
+    description: 'Two versions of the urban survival roguelike. One runner against the city. Fully playable, still evolving.'
   }
 ];

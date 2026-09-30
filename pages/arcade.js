@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { games } from '../data/arcade';
+import { games, collections } from '../data/arcade';
 import styles from '../styles/Arcade.module.css';
 
 export default function Arcade() {
@@ -22,14 +22,15 @@ export default function Arcade() {
           <a href="#fractured-city" className={styles.explore}>Explore the games ↓</a>
           <div className={styles.heroMark} aria-hidden="true">[ A_ ]</div>
         </section>
-        <section id="fractured-city" className={styles.collection} aria-labelledby="collection-title">
+        {collections.map((collection) => (
+        <section key={collection.id} id={collection.id} className={styles.collection} aria-labelledby={collection.id + "-title"}>
           <div className={styles.sectionHeading}>
-            <div><p className={styles.eyebrow}>01 / EVOLVING WORLDS</p><h2 id="collection-title">Fractured City</h2></div>
-            <span className={styles.count}>{String(games.length).padStart(2, '0')} PLAYABLE VERSIONS</span>
+            <div><p className={styles.eyebrow}>{collection.eyebrow}</p><h2 id={collection.id + "-title"}>{collection.title}</h2></div>
+            <span className={styles.count}>{String(games.filter(game => game.collection === collection.id).length).padStart(2, '0')} PLAYABLE VERSIONS</span>
           </div>
-          <p className={styles.collectionIntro}>Two single-prompt takes on a city learning to survive. Both fully playable, both still in development.</p>
+          <p className={styles.collectionIntro}>{collection.description}</p>
           <div className={styles.grid}>
-            {games.map((game) => (
+            {games.filter(game => game.collection === collection.id).map((game) => (
               <article key={game.id} className={styles.card}>
                 <a href={game.url} target="_blank" rel="noopener noreferrer" className={styles.imageLink} aria-label={'Play ' + game.title + ' (opens in a new tab)'}>
                   <img src={game.image} alt={game.imageAlt} width="1258" height="622" />
@@ -43,7 +44,7 @@ export default function Arcade() {
                     <div><dt>Best played on</dt><dd>{game.device}</dd></div>
                     <div><dt>Controls</dt><dd>{game.controls}</dd></div>
                     <div><dt>Built with</dt><dd>{game.tools}</dd></div>
-                    <div><dt>Format</dt><dd>Single-prompt experiment · Survival colony sim</dd></div>
+                    <div><dt>Format</dt><dd>{game.format}</dd></div>
                   </dl>
                   <p className={styles.saveNote}>{game.note}</p>
                   <div className={styles.actions}>
@@ -55,6 +56,7 @@ export default function Arcade() {
             ))}
           </div>
         </section>
+        ))}
         <footer className={styles.footer}><span>NEURODISSIDENT / ARCADE</span><span>Glitch beautifully. Play curiously.</span></footer>
       </main>
     </div>
