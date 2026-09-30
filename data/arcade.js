@@ -125,10 +125,77 @@ export const games = [
     controls: 'Hold and release Space or Cast · Space to hook and reel · A / D to look · C / K / B / M for menus',
     tools: 'JavaScript · HTML / CSS · Three.js · Procedural Canvas fish art · PWA',
     note: 'Progress saves on your device after each catch. Installable for offline play after loading.'
+  },
+  {
+    id: 'snake-oil', collection: 'in-development',
+    title: 'Snake Oil', version: 'Snake Oil', stage: 'Round-one concept · In development',
+    availability: 'Playable prototype', format: 'Narrative merchant simulation · Concept prototype',
+    url: 'https://snake-oil-iota.vercel.app/',
+    source: 'https://github.com/NeruoDissident/Snake-Oil',
+    image: '/arcade/snake-oil.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'Snake Oil’s Mud Creek prototype with journey choices, town information and a frontier merchant interface.',
+    summary: 'Know the people. Mind the promise. A medicine merchant’s first five days in Mud Creek.',
+    description: 'Arrive in Mud Creek with a wagon, scarce ingredients and a reputation still to make. Listen to the townspeople, compare their stories, formulate remedies, choose your promises and perform a medicine show. The people who believe you—and the consequences of your claims—are waiting the next day.',
+    concept: 'Round one of a larger game in active development. This playable five-day concept explores people, remedies, performance and consequences; the wider traveling-merchant campaign is still being developed.',
+    device: 'PC recommended for the text-rich interface',
+    controls: 'Click or tap choices, navigation and product controls',
+    tools: 'TypeScript · React · Vite · CSS · Zod save validation',
+    note: 'Progress autosaves in this browser. This is an early playable concept, not the final game.'
+  },
+  {
+    id: 'void-singer', collection: 'experiments',
+    title: 'Void Singer', version: 'Void Singer', stage: 'Just-for-fun experiment',
+    format: 'Biomechanical horror · Bullet hell',
+    url: 'https://void-singer.vercel.app/void_singer.html',
+    image: '/arcade/void-singer.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'A small vessel dodges glowing projectiles and biomechanical enemies in a dark vertical arena.',
+    summary: 'Choose a strange vessel and thread your way through a biomechanical bullet storm.',
+    description: 'A dark little arcade detour into biomechanical horror. Pick a vessel, dodge glowing projectile patterns and grow your weapon loadout as the run unfolds. Strange ships, organic enemies and an escalating storm of color make this one an experiment for the joy of it.',
+    device: 'PC recommended; touch input also supported',
+    controls: 'WASD / arrows to move · E or right mouse button for super · Two-finger super on touch',
+    tools: 'JavaScript · HTML / CSS · Canvas',
+    note: 'A standalone, just-for-fun experiment.'
+  },
+  {
+    id: 'spiro-art', collection: 'experiments',
+    title: 'SpiroArt', version: 'SpiroArt', stage: 'Creative experiment',
+    availability: 'Interactive toy', action: 'Open', imageLabel: 'IN ACTION',
+    format: 'Generative art · Spirograph drawing toy',
+    url: 'https://spiro-art.vercel.app/',
+    source: 'https://github.com/NeruoDissident/SpiroArt',
+    image: '/arcade/spiro-art.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'A glowing cyan spirograph drawing with a visible gear and drawing export controls.',
+    summary: 'Spin gears into glowing geometry, then keep the patterns you like.',
+    description: 'A playful generative spirograph for making luminous looping patterns. Explore the configuration controls, let the demo draw, and export a favorite result as PNG or SVG. No score to chase—just shapes, color and happy accidents.',
+    device: 'PC or mobile — mouse and touch interface',
+    controls: 'Demo to draw · Configure to adjust the pattern · Clear to restart · PNG / SVG to export',
+    tools: 'JavaScript · HTML / CSS · Canvas · SVG export',
+    note: 'A just-for-fun drawing experiment. Export an image when you make something you want to keep.'
+  },
+  {
+    id: 'simple-spira-art', collection: 'experiments',
+    title: 'Simple Spira Art', version: 'Spira Art', stage: 'Creative experiment',
+    availability: 'Interactive toy', action: 'Open', imageLabel: 'IN ACTION',
+    format: 'Generative art · Gear shapes and palettes',
+    url: 'https://simple-spira-art.vercel.app/',
+    source: 'https://github.com/NeruoDissident/simple_spira_art',
+    image: '/arcade/simple-spira-art.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'A spirograph canvas alongside controls for ring sizes, gears, pen holes, shapes and color palettes.',
+    summary: 'Mix ring sizes, gear shapes and palettes into endlessly looping drawings.',
+    description: 'A hands-on spirograph playground with inside and outside drawing, selectable rings and gears, pen holes, and shapes from round to rounded triangle. Try a palette, cycle colors, let auto-draw run, and save the result as a PNG.',
+    device: 'PC recommended for the full control panel; mobile controls available',
+    controls: 'Choose a ring, gear and palette · Start Auto or Space to draw · Save PNG to export',
+    tools: 'JavaScript · HTML / CSS · Canvas · SVG controls',
+    note: 'A small creative toy made for playing with patterns.'
   }
 ];
 
 export const collections = [
+  {
+    id: 'in-development', eyebrow: 'WORKS IN PROGRESS',
+    title: 'In Development',
+    description: 'Early playable concepts with a bigger future in mind. Explore the first version of an idea while the full game takes shape.'
+  },
   {
     id: 'fractured-city',
     eyebrow: '01 / EVOLVING WORLDS',

@@ -9,12 +9,12 @@ const categoryHref = (id) => '/arcade?category=' + id;
 function GameCard({ game }) {
   return (
     <article id={game.id} className={styles.card}>
-      <a href={game.url} target="_blank" rel="noopener noreferrer" className={styles.imageLink} aria-label={'Play ' + game.title + ' (opens in a new tab)'}>
+      <a href={game.url} target="_blank" rel="noopener noreferrer" className={styles.imageLink} aria-label={(game.action || 'Play') + ' ' + game.title + ' (opens in a new tab)'}>
         <img src={game.image} alt={game.imageAlt} width={game.imageWidth || 1258} height={game.imageHeight || 622} />
-        <span className={styles.imageLabel}>GAMEPLAY / {game.version}</span>
+        <span className={styles.imageLabel}>{game.imageLabel || 'GAMEPLAY'} / {game.version}</span>
       </a>
       <div className={styles.cardBody}>
-        <div className={styles.badges}><span>● Fully playable</span><span>{game.stage || 'In development'}</span></div>
+        <div className={styles.badges}><span>● {game.availability || 'Fully playable'}</span><span>{game.stage || 'In development'}</span></div>
         <h3>{game.title}</h3>
         <p className={styles.description}>{game.description}</p>
         {game.concept && <p className={styles.concept}>{game.concept}</p>}
@@ -26,7 +26,7 @@ function GameCard({ game }) {
         </dl>
         <p className={styles.saveNote}>{game.note}</p>
         <div className={styles.actions}>
-          <a className={styles.play} href={game.url} target="_blank" rel="noopener noreferrer">Play {game.version} ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>
+          <a className={styles.play} href={game.url} target="_blank" rel="noopener noreferrer">{game.action || 'Play'} {game.version} ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>
           {game.source && <a className={styles.source} href={game.source} target="_blank" rel="noopener noreferrer">Source ↗<span className={styles.srOnly}> (opens in a new tab)</span></a>}
         </div>
       </div>
@@ -58,7 +58,7 @@ export default function Arcade() {
           <div className={styles.heroMark} aria-hidden="true">[ A_ ]</div>
         </section>
         <nav id="games" className={styles.categoryNav} aria-label="Game categories">
-          <Link href="/arcade" scroll={false} aria-current={!selected ? 'page' : undefined}>All Games <span>{games.length}</span></Link>
+          <Link href="/arcade" scroll={false} aria-current={!selected ? 'page' : undefined}>All Projects <span>{games.length}</span></Link>
           {collections.map(collection => (
             <Link key={collection.id} href={categoryHref(collection.id)} scroll={false} aria-current={selected?.id === collection.id ? 'page' : undefined}>
               {collection.id === 'night-run' ? 'Night Run' : collection.title}
@@ -68,8 +68,8 @@ export default function Arcade() {
         </nav>
         <section className={styles.collection} aria-labelledby="collection-title">
           <div className={styles.sectionHeading}>
-            <div><p className={styles.eyebrow}>{selected?.eyebrow || 'PICK YOUR NEXT SIGNAL'}</p><h2 id="collection-title">{selected?.title || 'All Games'}</h2></div>
-            <span className={styles.count}>{String(visibleGames.length).padStart(2, '0')} PLAYABLE GAMES</span>
+            <div><p className={styles.eyebrow}>{selected?.eyebrow || 'PICK YOUR NEXT SIGNAL'}</p><h2 id="collection-title">{selected?.title || 'All Projects'}</h2></div>
+            <span className={styles.count}>{String(visibleGames.length).padStart(2, '0')} PROJECTS</span>
           </div>
           <p className={styles.collectionIntro}>{selected?.description || 'Browse the collection. Open a game’s details for controls, tools and the story behind it.'}</p>
           <div className={selected ? styles.grid : styles.overviewGrid}>
@@ -82,10 +82,10 @@ export default function Arcade() {
                   <p className={styles.eyebrow}>{collections.find(c => c.id === game.collection).title}</p>
                   <h3>{game.title}</h3>
                   <p>{game.summary || game.format}</p>
-                  <div className={styles.badges}><span>● Fully playable</span><span>{game.stage || 'In development'}</span></div>
+                  <div className={styles.badges}><span>● {game.availability || 'Fully playable'}</span><span>{game.stage || 'In development'}</span></div>
                   <div className={styles.compactActions}>
                     <Link href={categoryHref(game.collection) + '#' + game.id}>View details →</Link>
-                    <a href={game.url} target="_blank" rel="noopener noreferrer" aria-label={'Play ' + game.title + ' (opens in a new tab)'}>Play ↗</a>
+                    <a href={game.url} target="_blank" rel="noopener noreferrer" aria-label={(game.action || 'Play') + ' ' + game.title + ' (opens in a new tab)'}>{game.action || 'Play'} ↗</a>
                   </div>
                 </div>
               </article>
