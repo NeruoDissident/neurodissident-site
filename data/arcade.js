@@ -187,6 +187,22 @@ export const games = [
     controls: 'Choose a ring, gear and palette · Start Auto or Space to draw · Save PNG to export',
     tools: 'JavaScript · HTML / CSS · Canvas · SVG controls',
     note: 'A small creative toy made for playing with patterns.'
+  },
+  {
+    id: 'gravebound', collection: 'in-development',
+    title: 'Gravebound Pinball 3D', version: 'Gravebound',
+    availability: 'Fully playable', stage: 'In development',
+    format: 'Dark-fantasy RPG · 3D pinball',
+    url: 'https://gravebound-six.vercel.app/',
+    source: 'https://github.com/NeruoDissident/gravebound',
+    image: '/arcade/gravebound.png', imageWidth: 1258, imageHeight: 750,
+    imageAlt: 'A haunted 3D pinball table with skeleton enemies, glowing bumpers, a quest journal and Knight abilities.',
+    summary: 'The ball is your hero. Take a cursed kingdom one flipper shot at a time.',
+    description: 'A dark-fantasy RPG played on one connected pinball table. Choose a Knight, Rogue, Mage or Cleric, then fight through the Black Keep, the Wilds, Grave Hollow and the Grave. Complete quests, discover relics and unleash class powers while exploring campaign wings and confronting bosses.',
+    device: 'PC recommended — keyboard controls',
+    controls: 'Z / slash or arrow keys for flippers · Hold and release Space to launch; Space to nudge · C for view · P to pause',
+    tools: 'JavaScript · HTML / CSS · Three.js · Procedural textures · Node.js build',
+    note: 'Save states and high scores are stored locally in your browser. Fully playable, with development ongoing.'
   }
 ];
 
@@ -194,7 +210,7 @@ export const collections = [
   {
     id: 'in-development', eyebrow: 'WORKS IN PROGRESS',
     title: 'In Development',
-    description: 'Early playable concepts with a bigger future in mind. Explore the first version of an idea while the full game takes shape.'
+    description: 'Playable worlds still taking shape—from early concepts to fully playable games with more to come.'
   },
   {
     id: 'fractured-city',
