@@ -1,5 +1,21 @@
 export const games = [
   {
+    id: 'pinballsauce', collection: 'in-development',
+    title: 'Pinballsauce', version: 'Pinballsauce',
+    availability: 'Fully playable', stage: 'In development',
+    format: '3D pinball collection · Arcade and RPG tables',
+    url: 'https://pinballsauce.vercel.app/',
+    source: 'https://github.com/NeruoDissident/pinballsauce',
+    image: '/arcade/pinballsauce.png', imageWidth: 1600, imageHeight: 900,
+    imageAlt: 'The Pinballsauce table selector with Gravebound, Neon Descent, Crush Hour and Judgment beside a live pinball table.',
+    summary: 'Six tables. Dark fantasy, neon streets and heaven versus hell. Keep the ball alive.',
+    description: 'A growing collection of 3D pinball tables, from the dark-fantasy quests of Gravebound and the cyberpunk world of Neon Descent to Crush Hour and Judgment’s battle between heaven, earth and hell. Chase ramp shots, multiballs and table goals, or dive into RPG tables with classes, enemies and upgrades. Four tables in development and two experimental tables share physical flipper action, adjustable power, and keyboard, touch or controller support.',
+    device: 'PC, mobile or handheld PC — keyboard, touch and standard gamepads',
+    controls: 'Z / slash or arrows: flippers · Hold and release Space: launch · Space: nudge · Controller: LB / RB or triggers, A to launch / nudge, Menu to pause',
+    tools: 'JavaScript · HTML / CSS · Three.js · Web Audio',
+    note: 'Progress, high scores and power settings save in your browser. On ROG Ally, use Gamepad Mode. Tables are playable and still evolving.'
+  },
+  {
     collection: 'fractured-city', format: 'Single-prompt experiment · Survival colony sim', id: 'fractured-city', title: 'The Fractured City', version: 'V1',
     url: 'https://the-fractured-city.vercel.app/',
     source: 'https://github.com/NeruoDissident/The-Fractured-City',
@@ -10,32 +26,6 @@ export const games = [
     controls: 'Click to inspect · Right-click to move · WASD to pan · Space to pause',
     tools: 'JavaScript · HTML / CSS · Canvas · Node.js build',
     note: 'Progress saves in your browser. Export a save to keep a portable backup.'
-  },
-  {
-    collection: 'fractured-city', format: 'Single-prompt experiment · Survival colony sim', id: 'fractured-city-v2', title: 'Fractured City V2', version: 'V2',
-    url: 'https://fractured-city-v2.vercel.app/',
-    source: 'https://github.com/NeruoDissident/fractured-city-v2',
-    image: '/arcade/fractured-city-v2.png',
-    imageAlt: 'Harlow Street with three survivors inside an apartment block and scavenging controls.',
-    description: 'Build up your block and defend it through raids and the night. Send survivors into enterable buildings, manage their needs, moods, skills and traits, and encounter 13 named persistent characters across a ruined city.',
-    device: 'PC recommended for overview; mobile touch controls supported',
-    controls: 'Mouse and keyboard · On touch: tap, drag, pinch and long-press to give orders',
-    tools: 'JavaScript · HTML / CSS · Canvas · PWA / service worker',
-    note: 'Autosaves in your browser. Supports home-screen installation and offline play after the first load.'
-  },
-  {
-    id: 'the-night-run', collection: 'night-run',
-    title: 'The Night Run', version: 'The Night Run',
-    format: 'Turn-based survival roguelike',
-    url: 'https://the-night-run-neon.vercel.app/',
-    source: 'https://github.com/NeruoDissident/The-Night-Run',
-    image: '/arcade/night-run-neon.png',
-    imageAlt: 'A Street Kid explores Lowlight Blocks, with survival meters, a city map and nearby contacts.',
-    description: 'Choose from six classes and survive eight procedural districts. Use stealth, tactical combat, crafting and faction alliances to shape your run. Find an escape, commit to a faction, or leave another life behind in the city.',
-    device: 'PC or mobile — includes an eight-direction touch pad',
-    controls: 'WASD / arrows to move · E to interact · Tab / F to target and attack · Touch movement and action buttons',
-    tools: 'JavaScript · HTML / CSS · Canvas · Python build · PWA / service worker',
-    note: 'Local autosaves with export/import. Installable for offline play after the first load. Permadeath ends the active run.'
   },
   {
     id: 'night-run', collection: 'night-run',
@@ -188,22 +178,6 @@ export const games = [
     tools: 'JavaScript · HTML / CSS · Canvas · SVG controls',
     note: 'A small creative toy made for playing with patterns.'
   },
-  {
-    id: 'gravebound', collection: 'in-development',
-    title: 'Gravebound Pinball 3D', version: 'Gravebound',
-    availability: 'Fully playable', stage: 'In development',
-    format: 'Dark-fantasy RPG · 3D pinball',
-    url: 'https://gravebound-six.vercel.app/',
-    source: 'https://github.com/NeruoDissident/gravebound',
-    image: '/arcade/gravebound.png', imageWidth: 1258, imageHeight: 750,
-    imageAlt: 'A haunted 3D pinball table with skeleton enemies, glowing bumpers, a quest journal and Knight abilities.',
-    summary: 'The ball is your hero. Take a cursed kingdom one flipper shot at a time.',
-    description: 'A dark-fantasy RPG played on one connected pinball table. Choose a Knight, Rogue, Mage or Cleric, then fight through the Black Keep, the Wilds, Grave Hollow and the Grave. Complete quests, discover relics and unleash class powers while exploring campaign wings and confronting bosses.',
-    device: 'PC recommended — keyboard controls',
-    controls: 'Z / slash or arrow keys for flippers · Hold and release Space to launch; Space to nudge · C for view · P to pause',
-    tools: 'JavaScript · HTML / CSS · Three.js · Procedural textures · Node.js build',
-    note: 'Save states and high scores are stored locally in your browser. Fully playable, with development ongoing.'
-  }
 ];
 
 export const collections = [
@@ -216,13 +190,13 @@ export const collections = [
     id: 'fractured-city',
     eyebrow: '01 / EVOLVING WORLDS',
     title: 'Fractured City',
-    description: 'Two single-prompt takes on a city learning to survive. Both fully playable, both still in development.'
+    description: 'A single-prompt take on a city learning to survive. Fully playable and still in development.'
   },
   {
     id: 'night-run',
     eyebrow: '02 / SURVIVAL ROGUELIKES',
     title: 'Fractured City: Night Run',
-    description: 'Two versions of the urban survival roguelike. One runner against the city. Fully playable, still evolving.'
+    description: 'An urban survival roguelike. One runner against the city. Fully playable, still evolving.'
   },
   {
     id: 'experiments', eyebrow: '03 / IDEAS AT PLAY',
